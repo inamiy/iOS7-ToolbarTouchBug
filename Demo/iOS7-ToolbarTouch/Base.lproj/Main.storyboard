@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="9sZ-P0-kAl">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lej-iq-ccZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZNZ-2U-MBP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="229" translatesAutoresizingMaskIntoConstraints="NO" id="yy8-Jd-4Ua">
+                                <rect key="frame" x="91" y="438" width="229" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">This touch area doesn't work
+in iOS 7.0.0-7.0.3,
+including Safari, Mail, etc.
+↓</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="yy8-Jd-4Ua" secondAttribute="trailing" id="Dpg-5H-btq"/>
+                            <constraint firstItem="ZNZ-2U-MBP" firstAttribute="top" secondItem="yy8-Jd-4Ua" secondAttribute="bottom" id="NCG-Bo-tnv"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem systemItem="refresh" id="H0N-gd-d4q">
+                            <connections>
+                                <action selector="handleBarButtonItem:" destination="vXZ-lx-hvc" id="h8b-Qd-Bft"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="flexibleSpace" id="LAC-jh-PDO"/>
+                        <barButtonItem systemItem="play" id="uvf-aM-Cb0">
+                            <connections>
+                                <action selector="handleBarButtonItem:" destination="vXZ-lx-hvc" id="AaQ-X9-dcG"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="flexibleSpace" id="9Wz-4a-lii"/>
+                        <barButtonItem systemItem="action" id="3uY-hE-LOr">
+                            <connections>
+                                <action selector="handleBarButtonItem:" destination="vXZ-lx-hvc" id="akM-Qf-R7h"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="XL9-R7-Utr">
+                        <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="pju-Y4-1Kh">
+                            <connections>
+                                <action selector="handleBarButtonItem:" destination="vXZ-lx-hvc" id="b8r-Hq-Pvg"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="rpT-QK-b7P">
+                            <connections>
+                                <action selector="handleBarButtonItem:" destination="vXZ-lx-hvc" id="6V1-gS-5ah"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="350" y="138"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="lPU-RM-RJv">
+            <objects>
+                <navigationController definesPresentationContext="YES" toolbarHidden="NO" id="9sZ-P0-kAl" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6df-Ey-8ag">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="2wu-M5-hcp">
+                        <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="dQj-at-Fqj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bnM-XU-OQV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-46" y="138"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
