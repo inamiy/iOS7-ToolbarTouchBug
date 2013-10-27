@@ -21,6 +21,7 @@
 		481BD362181A0D5400BE3563 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 481BD344181A0D5400BE3563 /* UIKit.framework */; };
 		481BD36A181A0D5400BE3563 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 481BD368181A0D5400BE3563 /* InfoPlist.strings */; };
 		481BD36C181A0D5400BE3563 /* iOS7_ToolbarTouchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 481BD36B181A0D5400BE3563 /* iOS7_ToolbarTouchTests.m */; };
+		B6FC13F7B8AC446190179B32 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A92C2A08AD0443A8A80CB4B /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		481BD367181A0D5400BE3563 /* iOS7-ToolbarTouchTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOS7-ToolbarTouchTests-Info.plist"; sourceTree = "<group>"; };
 		481BD369181A0D5400BE3563 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		481BD36B181A0D5400BE3563 /* iOS7_ToolbarTouchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS7_ToolbarTouchTests.m; sourceTree = "<group>"; };
+		5A92C2A08AD0443A8A80CB4B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AC1F835AC024DDBAA2FD62B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,7 @@
 				481BD343181A0D5400BE3563 /* CoreGraphics.framework in Frameworks */,
 				481BD345181A0D5400BE3563 /* UIKit.framework in Frameworks */,
 				481BD341181A0D5400BE3563 /* Foundation.framework in Frameworks */,
+				B6FC13F7B8AC446190179B32 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +90,7 @@
 				481BD365181A0D5400BE3563 /* iOS7-ToolbarTouchTests */,
 				481BD33F181A0D5400BE3563 /* Frameworks */,
 				481BD33E181A0D5400BE3563 /* Products */,
+				8AC1F835AC024DDBAA2FD62B /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +110,7 @@
 				481BD342181A0D5400BE3563 /* CoreGraphics.framework */,
 				481BD344181A0D5400BE3563 /* UIKit.framework */,
 				481BD35F181A0D5400BE3563 /* XCTest.framework */,
+				5A92C2A08AD0443A8A80CB4B /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -159,9 +165,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 481BD36F181A0D5400BE3563 /* Build configuration list for PBXNativeTarget "iOS7-ToolbarTouch" */;
 			buildPhases = (
+				EADD97A35B3A4E87894A91F0 /* Check Pods Manifest.lock */,
 				481BD339181A0D5400BE3563 /* Sources */,
 				481BD33A181A0D5400BE3563 /* Frameworks */,
 				481BD33B181A0D5400BE3563 /* Resources */,
+				F0629F89B2594597BED38D5B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -243,6 +251,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EADD97A35B3A4E87894A91F0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F0629F89B2594597BED38D5B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		481BD339181A0D5400BE3563 /* Sources */ = {
@@ -375,6 +416,7 @@
 		};
 		481BD370181A0D5400BE3563 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AC1F835AC024DDBAA2FD62B /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -388,6 +430,7 @@
 		};
 		481BD371181A0D5400BE3563 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AC1F835AC024DDBAA2FD62B /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -460,6 +503,7 @@
 				481BD371181A0D5400BE3563 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		481BD372181A0D5400BE3563 /* Build configuration list for PBXNativeTarget "iOS7-ToolbarTouchTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +512,7 @@
 				481BD374181A0D5400BE3563 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
